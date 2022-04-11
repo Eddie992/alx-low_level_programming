@@ -1,32 +1,26 @@
 #include <stdio.h>
 
 /**
- *main - print 0-9 separated with commas, using putchar
- *Return: 0
+ * main - a simple program that outputs 00-99 separated by commas
+ *
+ * Return: 0 on success
  */
-
 int main(void)
 {
-	int tens = '0';
-	int ones = '1';
+	int i;
+	int j;
 
-	while (tens <= '8')
-	{
-		while (ones <= '9')
+	for (i = 48; i < 58; i++)
+		for (j = 48; j < 58; j++)
 		{
-			putchar(tens);
-			putchar(ones);
-			if (tens != '8' || ones != '9')
+			putchar(i);
+			putchar(j);
+			if (i != 57 || j != 57)
 			{
 				putchar(',');
 				putchar(' ');
 			}
-			ones++;
 		}
-		tens++;
-		ones = tens + '1';
-	}
 	putchar('\n');
-
 	return (0);
 }
