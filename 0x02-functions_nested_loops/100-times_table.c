@@ -1,27 +1,51 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_to_98 - print numbers n to 98
- * @n: integer argument
+ * _printstr - prints a given string
+ * @c: a null temrinated character array
+ *
+ * Return: 0 if successful
  */
-
-void print_to_98(int n)
+int _printstr(char c[])
 {
-	while (n < 98)
+	int i = 0;
+
+	while (c[i] != '\0')
+		_putchar(c[i++]);
+
+	return (0);
+}
+
+/**
+ * print_times_table - prints out an arbitrary multiplication table between
+ * 1 and 15
+ *
+ * @n: integer that defines dimnsions for the table
+ *
+ * Return void
+ */
+void print_times_table(int n)
+{
+	char buffer[5] = ",    ";
+	int i, j, num;
+
+	if (n < 0 || n > 15)
+		return;
+	for (i = 0; i <= n; i++)
 	{
-		printf("%d, ", n);
-		n++;
+		_putchar('0');
+		for (j = 1; j <= n; j++)
+		{
+			num = i * j;
+			buffer[2] = num / 100 + 48;
+			buffer[3] = num / 10 % 10 + 48;
+			buffer[4] = num % 10 + 48;
+			if (buffer[2] == '0')
+				buffer[2] = ' ';
+			if (buffer[3] == '0' && buffer[2] == ' ')
+				buffer[3] = ' ';
+			_printstr(buffer);
+		}
+		_putchar('\n');
 	}
-
-	while (n > 98)
-	{
-		printf("%d, ", n);
-		n--;
-	}
-
-	if (n == 98)
-		printf("%d", n);
-
-	printf("\n");
 }
