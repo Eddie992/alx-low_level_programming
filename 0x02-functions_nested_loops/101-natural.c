@@ -1,25 +1,21 @@
-#include "holberton.h"
+#include <stdio.h>
 
 /**
- * print_alphabet_x10 - entry point
+ * main - prints the sum of all natural numbers below 1024 that are
+ * divisible by 3 and 5
  *
- * Description: Prints the alphabet with _putchar ten times
- *
- * Return: void
+ * Return: 0 on success
  */
-
-
-void print_alphabet_x10(void)
+int main(void)
 {
-	char c;
 	int i;
+	int sum = 0;
 
-	for (i = 0; i < 10; i++)
-	{
-		for (c = 'a'; c <= 'z'; c++)
-		{
-			_putchar(c);
-		}
-		_putchar('\n');
-	}
+	for (i = 0; i < 1024; i += 3)
+		sum += i;
+	for (i = 0; i < 1024; i += 5)
+		if (i % 3)
+			sum += i;
+	printf("%d\n", sum);
+	return (0);
 }
