@@ -1,10 +1,11 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
  * print_alphabet - prints lowercase alphabet
  * Return: 0
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char alpha;
 
@@ -12,9 +13,9 @@ int main(void)
 
 	while (alpha <= 'z')
 	{
-		putchar(alpha);
+		_putchar(alpha);
 		alpha++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return(0);
 }
