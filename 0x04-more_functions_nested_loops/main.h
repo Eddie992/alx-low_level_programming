@@ -1,5 +1,5 @@
-#ifndef main
-#define main
+#ifndef mainh
+#define mainh
 
 int _isupper(int c);
 int _isdigit(int c);
