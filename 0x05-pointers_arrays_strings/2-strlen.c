@@ -9,5 +9,13 @@
  */
 int _strlen(char *s)
 {
-strlen(My_first_strlen);
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+	}
+
+	return (i);
 }
+
+
