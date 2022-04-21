@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _puts - puts a string followed by a newline to standard output
  *
@@ -9,8 +9,9 @@
  */
 void _puts(char *str)
 {
-char *str;
-str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-puts(str);
-return (0);
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
