@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
- *updates pointer to value 98
+ * reset_to_98 - changes passed integer pointer's dereferenced value
+ * to 98
  *
- *return Always 0
+ * @n: a pointer to an integer
+ *
+ * Return: 0
  */
 void reset_to_98(int *n)
 {
