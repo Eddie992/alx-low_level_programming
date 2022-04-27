@@ -1,0 +1,1 @@
+This repository records the ALX exercise number 0x07-pointers_arrays_strings about pointers, strings and arrays.
