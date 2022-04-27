@@ -17,3 +17,4 @@ char *_memcpy(char *dest, char *src, int n)
 
 	return (dest);
 }
+
