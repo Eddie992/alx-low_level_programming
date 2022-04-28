@@ -1,0 +1,1 @@
+Recursion in simple terms means a funcation calling itself. That is it executes it self. It is quite an interesting concept in c. This repository is illustrates this phenomenon
