@@ -1,17 +1,22 @@
 #include "main.h"
-**
- * _pow_recursion - return number to a positive integer power
- *
- * @x: number
- * @y: power
- *
- * Return: -1 if y < 0, result of x^y otherwise
+
+/**
+ * _pow_recursion - unction that returns value of x raised to the power of y.
+ * @x: first integer
+ * @y: second integer
+ * Return: Result
  */
 int _pow_recursion(int x, int y)
 {
+	int pw = 1;
+
 	if (y < 0)
 		return (-1);
-	if (y == 0)
+
+	if (!y)
 		return (1);
-	return (x * _pow_recursion(x, y - 1));
+
+	pw = _pow_recursion(x, y - 1);
+
+	return (pw * x);
 }

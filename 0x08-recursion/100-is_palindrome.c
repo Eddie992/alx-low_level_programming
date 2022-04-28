@@ -20,6 +20,15 @@ int exactmode(char *s1, char *s2)
 	return (0);
 }
 
+/**
+ * wildmode - Processes wildcards from s2 and handles backtracking
+ * to match multiple instances of wildcarded substrings
+ *
+ * @s1: string we're trying to match
+ * @s2: wildcarded string containing search pattern
+ *
+ * Return: 1 if valid match, 0 if not
+ */
 int wildmode(char *s1, char *s2)
 {
 	if (*s2 == '*')
@@ -35,6 +44,14 @@ int wildmode(char *s1, char *s2)
 	return (1);
 }
 
+/**
+ * wildcmp - Compares two strings with * wildcards. Sets initial search mode.
+ *
+ * @s1: first string, does not have *
+ * @s2: second string, has *
+ *
+ * Return: 1 if identical, otherwise 0
+ */
 int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*')
