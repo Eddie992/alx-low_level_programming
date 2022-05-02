@@ -1,0 +1,1 @@
+This repository explains the use of static libraries. This include the creation and using of the libraries in source code
