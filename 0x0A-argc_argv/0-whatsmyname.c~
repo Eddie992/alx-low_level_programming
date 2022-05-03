@@ -1,0 +1,14 @@
+#include <stdio.h>
+/**
+ *this program prints its name followed by a newline
+ *
+ *return always zero
+ *
+ */
+int main(int argc, char *argv[])
+{
+  int i;
+  i = 0;
+  printf("[%s]\n",argv[i]);
+  return (0);
+}
