@@ -1,4 +1,4 @@
-include <stdlib.h>
+#include <stdlib.h>
 
 /**
  * strtow - converts a string into its separate words
