@@ -4,6 +4,8 @@
 /**
  * print_list - prints all the elements of the list
  *
+ *struct list_s - singly linked list
+ *
  * @h: first node of linked list
  *
  * Return: the number of nodes printed
