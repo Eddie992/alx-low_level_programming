@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_nodeint - is a functions that adds a new node at the beginning of 
- *listint_t
+ * add_nodeint - is a functions that adds a new node at the list
  *
  * @head: head of list to add node to
  * @n: value to give n in node
