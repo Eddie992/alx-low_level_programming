@@ -1,5 +1,5 @@
-ifndef MAINNH
-#define MAINNH
+#ifndef MAINH
+#define MAINH
 
 #include <unistd.h>
 

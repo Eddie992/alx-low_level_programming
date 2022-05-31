@@ -1,1 +1,1 @@
-This repository is for the file I/O project exercise
+this repository is for the file i/o project
