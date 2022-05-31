@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - reads and prints text from a file to the st output
+ * read_textfile - prints text from a file
  *
  * @filename: name of the file
  * @letters: number of characters to read
