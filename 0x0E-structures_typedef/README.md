@@ -1,1 +1,0 @@
-This repository explores the concepts of typedef and structures
