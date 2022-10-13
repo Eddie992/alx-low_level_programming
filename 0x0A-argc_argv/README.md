@@ -1,1 +1,0 @@
-This repository demostrates the use of Command Line Arguments names argc and argv.
