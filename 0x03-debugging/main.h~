@@ -1,5 +1,0 @@
-#int main(void)
-/**
- *the function positive or negative checks if the number inputed is negative or positive
- */
-#positive_or_negative(i)
