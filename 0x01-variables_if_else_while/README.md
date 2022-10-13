@@ -1,1 +1,0 @@
-this folder is for writing functions and loops
