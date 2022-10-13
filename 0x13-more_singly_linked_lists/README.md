@@ -1,1 +1,0 @@
-This directory contains more solutions to the problems to do with Stringly lists.
