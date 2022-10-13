@@ -1,1 +1,0 @@
-This repository solves tasks to do with Stringly lists
