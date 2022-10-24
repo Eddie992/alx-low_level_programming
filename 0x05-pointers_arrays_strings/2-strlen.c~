@@ -1,0 +1,13 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ *@strlen is a function and it  returns the length of a string
+ *
+ *@My_first_strlen is the name of the string
+ *@s: is a the value of strlen
+ *return zero
+ */
+int _strlen(char *s)
+{
+strlen(My_first_strlen);
+}
