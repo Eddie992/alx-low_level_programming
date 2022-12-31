@@ -1,0 +1,1 @@
+This documents projects to do with variadic functions.
