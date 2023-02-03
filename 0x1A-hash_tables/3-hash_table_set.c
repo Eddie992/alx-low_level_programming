@@ -1,59 +1,51 @@
 #include "hash_tables.h"
 /**
- * link_nodes-Create a linked nodes
- * @key: Is the key to map
- * @value:Is the value from the key
- * Return: The new linked element
- */
-hash_node_t *link_nodes(const char *key, const char *value)
-{
-	hash_node_t *new_element;
-
-	new_element = malloc(sizeof(hash_table_t *));
-	if (new_element == NULL)
-		return (NULL);
-	new_element->key = strdup(key);
-	if (new_element->key == NULL)
-		return (NULL);
-	new_element->value = strdup(value);
-	if (new_element->value == NULL)
-		return (NULL);
-	return (new_element);
-}
-
-/**
- * hash_table_set -function that adds an element to the HT
- * @ht: Reference to hash table
- * @key:Is the key that will to map
- * @value:Is the value of each key
- * Return: 1 if is succes 0 is not
- */
+* hash_table_set - adds an element to a hash table
+* @ht: the table you want to add to
+* @key: the key
+* @value: the value
+* Return: 1 on success, 0 otherwise
+*/
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned int ind;
-	hash_node_t *map_node, *j;
+	unsigned long int index;
+	hash_node_t *new = NULL, *temp = NULL;
 
-	if (ht == NULL || key == NULL || value == '\0')
-		return (0);
-
-	ind = key_index((const unsigned char *) key, ht->size);
-
-	for (j = ht->array[ind]; j != NULL; j = j->next)
+	if (key == NULL || key == '\0' || value == NULL || ht == NULL)
 	{
-		if ((strcmp(j->key, key) == 0) && (strcmp(j->value, value) != 0))
-		{
-			free(j->value);
-			j->value = strdup(value);
-			if (j->value == NULL)
-				return (0);
-		}
-		return (1);
-	}
-	map_node = link_nodes(key, value);
-
-	if (map_node == NULL)
 		return (0);
-	map_node->next = ht->array[ind];
-	ht->array[ind] = map_node;
+	}
+	index = key_index((const unsigned char *)key, (*ht).size);
+	temp = (*ht).array[index];
+	while (temp != NULL)
+	{
+		if (strcmp((*temp).key, key) == 0)
+		{
+			free((*temp).value);
+			(*temp).value = strdup(value);
+			return (1);
+		}
+		temp = (*temp).next;
+	}
+	new = malloc(sizeof(hash_node_t));
+	if (!new)
+	{
+		return (0);
+	}
+	(*new).key = strdup(key);
+	if (!(*new).key)
+	{
+		free(new);
+		return (0);
+	}
+	(*new).value = strdup(value);
+	if (!(*new).value)
+	{
+		free((*new).key);
+		free(new);
+		return (0);
+	}
+	(*new).next = (*ht).array[index];
+	(*ht).array[index] = new;
 	return (1);
 }
